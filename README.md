@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is the Ruby on Rails final project from [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project) curriculum. It is a Facebook clone project. The core features for the project are users, profiles, "friendling", posts, news feed and liking. Other feature is to be able to sign-in with real Facebook by using Omniauth. 

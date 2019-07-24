@@ -17,6 +17,8 @@ gem 'devise'
 gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
+# to add add friend feature
+gem 'has_friendship'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

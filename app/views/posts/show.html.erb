@@ -1,5 +1,5 @@
 <p><%= @post.description %></p>
-<b>by</b> <i><%= @post.user.email %></i> <b>at</b> <i><%= @post.created_at.to_formatted_s(:short) %></i>
+by <b><%= @post.user.email %></b> at <b><%= @post.created_at.to_formatted_s(:short) %></b>
 <%= commontator_thread(@post) %>
 <% if user_signed_in? %>
   <p>

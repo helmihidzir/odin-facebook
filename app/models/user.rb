@@ -9,4 +9,6 @@ class User < ApplicationRecord
   acts_as_commontator
   # friendship feature
   has_friendship
+
+
 end

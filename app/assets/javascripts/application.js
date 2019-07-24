@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
+// If jquery-ujs was installed through jquery-rails
+//= require jquery_ujs
+// If using commentator's mentions functionality
+//= require commontator/application

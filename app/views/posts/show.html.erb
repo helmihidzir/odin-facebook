@@ -1,5 +1,6 @@
 <p><%= @post.description %></p>
-by <i><%= @post.user.email %></i> at <i><%= @post.created_at.to_formatted_s(:short) %></i>
+<b>by</b> <i><%= @post.user.email %></i> <b>at</b> <i><%= @post.created_at.to_formatted_s(:short) %></i>
+<%= commontator_thread(@post) %>
 <% if user_signed_in? %>
   <p>
     <%= link_to "Edit", edit_post_path %>

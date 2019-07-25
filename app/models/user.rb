@@ -8,4 +8,6 @@ class User < ApplicationRecord
   # commentator
   acts_as_commontator
   # friendship feature
+  has_many :friendships
+  has_many :friends, through: :friendships
 end

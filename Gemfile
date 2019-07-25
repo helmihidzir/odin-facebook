@@ -17,6 +17,8 @@ gem 'devise'
 gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
+# A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more.
+gem "nifty-generators", :group => :development
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -36,3 +38,6 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'mocha', group: :test

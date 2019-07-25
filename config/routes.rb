@@ -6,7 +6,5 @@ Rails.application.routes.draw do
   mount Commontator::Engine => '/commontator'
   # for user profile
   resources :users, only: [:show, :index]
-  resources :users do
-    get 'add_friend'
-  end
+  resources :friendships
 end

@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   # commentator config
   mount Commontator::Engine => '/commontator'
   # for user profile
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
+  resources :users do
+    get 'add_friend'
+  end
 end

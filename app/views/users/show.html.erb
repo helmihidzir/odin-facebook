@@ -1,3 +1,7 @@
 <h1>Your Profile</h1>
 <p>Email: <%= @user.email %></p>
 <p>Created at: <%= @user.created_at.to_formatted_s(:long) %></p>
+<% if @user.posts.any? %>
+  <h3>Posts (<%= @user.posts.count %>)</h3>
+    <%= @user.posts %>
+<% end %>

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :liked, :unliked]
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
@@ -36,6 +36,16 @@ class PostsController < ApplicationController
     @post.destroy
     flash[:success] = "Post deleted"
     redirect_to root_path
+  end
+
+  def liked
+    @post.liked_by current_user
+    redirect_back(fallback_location:"/")
+  end
+
+  def unliked
+    @post.unliked_by current_user
+    redirect_back(fallback_location:"/")
   end
 
   private

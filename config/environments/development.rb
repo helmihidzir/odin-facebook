@@ -61,4 +61,7 @@ Rails.application.configure do
 
   # devise config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # better errors
+  config.consider_all_requests_local = true
 end

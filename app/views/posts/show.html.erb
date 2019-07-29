@@ -1,5 +1,12 @@
 <p><%= @post.description %></p>
 by <b><%= @post.user.email %></b> at <b><%= @post.created_at.to_formatted_s(:short) %></b>
+<br/>
+<% if current_user.liked? @post%>
+  <%= link_to "Like", dislike_post_path(@post), method: :put %>
+<% else %>
+  <%= link_to "Like", like_post_path(@post), method: :put %>
+<% end %>
+<%= @post.get_likes.size %>
 <%= commontator_thread(@post) %>
 <% if user_signed_in? %>
   <p>

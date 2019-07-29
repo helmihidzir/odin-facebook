@@ -10,4 +10,5 @@ class User < ApplicationRecord
   # friendship feature
   has_many :friendships
   has_many :friends, through: :friendships
+  acts_as_voter
 end

@@ -18,6 +18,7 @@
       <%= link_to "Profile", current_user %>
       <%= link_to "Find Friends", users_path %>
       <%= link_to "New Post", new_post_path %>
+      <%= link_to "Notification", friend_requests_path %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path %>

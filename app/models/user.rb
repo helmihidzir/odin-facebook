@@ -7,8 +7,16 @@ class User < ApplicationRecord
   has_many :comments
   # commentator
   acts_as_commontator
-  # friendship feature
-  has_many :friendships
-  has_many :friends, through: :friendships
+
   acts_as_voter
+
+  has_many :friend_requests, dependent: :destroy
+  has_many :pending_friends, through: :friend_requests, source: :friend
+
+  has_many :friendships, dependent: :destroy
+  has_many :friends, through: :friendships
+
+  def remove_friend(friend)
+    current_user.friends.destroy(friend)
+  end
 end

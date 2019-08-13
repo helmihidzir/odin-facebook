@@ -26,7 +26,7 @@ class FriendRequestsController < ApplicationController
 
   def update
     @friend_request.accept
-    redirect_to root_path
+    head :no_content
   end
 
   private

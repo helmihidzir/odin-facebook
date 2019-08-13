@@ -26,7 +26,8 @@ class FriendRequestsController < ApplicationController
 
   def update
     @friend_request.accept
-    head :no_content
+    flash[:success] = "Accepted friend request"
+    redirect_to @friend_request
   end
 
   private

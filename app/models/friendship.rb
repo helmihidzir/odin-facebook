@@ -10,7 +10,7 @@ class Friendship < ApplicationRecord
   private
 
   def create_inverse_relationship
-    friend.friendships.build(friend: user)
+    friend.friends << user
   end
 
   def destroy_inverse_relationship

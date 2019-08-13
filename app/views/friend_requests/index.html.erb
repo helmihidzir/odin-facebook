@@ -1,11 +1,11 @@
 <h2>Incoming Friend Requests</h2>
 <% unless @incoming.blank? %>
   <% @incoming.each do |i| %>
-    <%= i %>
+    <%= i.user.email %>
     <%= link_to "Accept", friend_request_path(i), method: :put %>
   <% end %>
 <% end %>
 <h2>Pending Friend Requests</h2>
 <% @outgoing.each do |p| %>
-  <%= p %>
+  <%= p.friend.email %>
 <% end %>

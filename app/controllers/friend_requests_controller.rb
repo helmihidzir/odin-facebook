@@ -1,5 +1,6 @@
 class FriendRequestsController < ApplicationController
   before_action :set_friend_request, except: [:index, :create]
+
   def create
     friend = User.find(params[:friend_id])
     @friend_request = current_user.friend_requests.new(friend: friend)
@@ -25,7 +26,7 @@ class FriendRequestsController < ApplicationController
 
   def update
     @friend_request.accept
-    head :no_content
+    redirect_to root_path
   end
 
   private

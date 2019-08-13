@@ -2,7 +2,7 @@
 <% unless @incoming.blank? %>
   <% @incoming.each do |i| %>
     <%= i %>
-    <%= link_to "Accept", friend_request_path(friend_id: i) %>
+    <%= link_to "Accept", friend_request_path(i), method: :put %>
   <% end %>
 <% end %>
 <h2>Pending Friend Requests</h2>

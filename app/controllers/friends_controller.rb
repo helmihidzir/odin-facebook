@@ -6,8 +6,9 @@ class FriendsController < ApplicationController
   end
 
   def destroy
-    current_user.remove_friend(@friend)
-    head :no_content
+    current_user.friends.destroy(@friend)
+    flash[:success] = "Removed friend"
+    redirect_to current_user
   end
 
   private

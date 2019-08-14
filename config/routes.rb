@@ -11,7 +11,6 @@ Rails.application.routes.draw do
       put "dislike", to: "posts#unliked"
     end
   end
-  get 'friends/index'
-  get 'friends/destroy'
+  resources :friends, only: [:index, :destroy]
   resources :friend_requests
 end

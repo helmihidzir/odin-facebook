@@ -7,6 +7,9 @@ class Friendship < ApplicationRecord
 
   validate :not_self
 
+  validates :user, presence: true
+  validates :friend, presence: true, uniqueness: { scope: :user }
+
   private
 
   def create_inverse_relationship

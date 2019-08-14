@@ -6,6 +6,9 @@ class FriendRequest < ApplicationRecord
   validate :not_friends
   validate :not_pending
 
+  validates :user, presence: true
+  validates :friend, presence: true, uniqueness: { scope: :user }
+
   def accept
     user.friends << friend
     destroy

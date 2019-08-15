@@ -1,5 +1,7 @@
-<h1>Friends</h1>
+<h1>Friends (<%= @friends.count %>)</h1>
 <% @friends.each do |friend| %>
-  <%= friend.email %>
-  <%= link_to "Remove friend", friend_path(friend.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  <p>
+    <%= friend.email %>
+    <%= link_to "Remove friend", friend_path(friend.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </p>
 <% end %>

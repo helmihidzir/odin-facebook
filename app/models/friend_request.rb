@@ -6,8 +6,8 @@ class FriendRequest < ApplicationRecord
   validate :not_friends
   validate :not_pending
 
-  validates :user, presence: true
-  validates :friend, presence: true, uniqueness: { scope: :user }
+  # validates :user, presence: true
+  # validates :friend, presence: true, uniqueness: { scope: :user }
 
   def accept
     user.friends << friend
@@ -21,10 +21,10 @@ class FriendRequest < ApplicationRecord
   end
 
   def not_friends
-    errors.add(:friend, 'is already added') if user.friends.include?(friend)
+    errors.add(:friend, 'already added') if user.friends.include?(friend)
   end
 
   def not_pending
-    errors.add(:friend, 'already requested friendship') if friend.pending_friends.include?(user)
+    errors.add(:friend, 'request is waiting to be accepted') if user.pending_friends.include?(friend) || friend.pending_friends.include?(user)
   end
 end

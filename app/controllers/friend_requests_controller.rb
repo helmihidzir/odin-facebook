@@ -7,7 +7,8 @@ class FriendRequestsController < ApplicationController
     if @friend_request.save
       redirect_to users_path, notice: "Successfully sent friend request!"
     else
-      render json: @friend_request.errors, status: :unprocessable_entity
+      redirect_to users_path
+      flash[:error] = @friend_request.errors.full_messages.to_sentence
     end
   end
 

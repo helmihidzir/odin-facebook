@@ -15,14 +15,10 @@
     <% end %>
     <%= link_to "Home", root_path %>
     <% if user_signed_in? %>
+      <%= link_to "New Post", new_post_path %>
       <%= link_to "Profile", current_user %>
       <%= link_to "Find Friends", users_path %>
-      <%= link_to "New Post", new_post_path %>
-      <%# if @total_request.present? %>
       <%= link_to "Notification[#{notification}]", friend_requests_path %>
-      <%# elsif @total_request.blank? %>
-        <%#= link_to "Notification[0]", friend_requests_path %>
-      <%# end %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path %>

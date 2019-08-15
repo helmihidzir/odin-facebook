@@ -3,7 +3,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @posts = Post.all.order("created_at DESC")
+    # @posts = Post.all.order("created_at DESC")
+    friend_ids = "SELECT user_id FROM friendships WHERE  friend_id = :user_id"
+    @posts = Post.where("user_id IN (#{friend_ids}) OR user_id = :user_id", user_id: current_user.id)
   end
 
   def new
@@ -15,6 +17,8 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to root_path, notice: "Successfully created a new Post!"
+    else
+      puts @post.errors.full_messages
     end
   end
 

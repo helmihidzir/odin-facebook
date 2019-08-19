@@ -4,6 +4,7 @@
     <p>
       <%= i.user.name %>
       <%= link_to "Accept", friend_request_path(i), method: :put %>
+      <%= link_to "Ignore", friend_request_path(i), method: :delete %>
     </p>
   <% end %>
 <% end %>

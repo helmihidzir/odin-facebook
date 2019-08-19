@@ -22,7 +22,8 @@ class FriendRequestsController < ApplicationController
 
   def destroy
     @friend_request.destroy
-    head :no_content
+    flash[:success] = "Ignored friend request"
+    redirect_to @friend_request
   end
 
   def update

@@ -4,3 +4,16 @@
 <p>Created at: <%= @user.created_at.to_formatted_s(:long) %></p>
 <%= link_to 'Edit Profile', edit_user_registration_path %>
 <%= link_to "Friends (#{@user.friends.count})", friends_path %>
+</br>
+<h3><%= @user.name %> post's</h3>
+<% @user.posts.each do |post| %>
+  <p><%= post.description %></p>
+  <% if current_user.liked? post%>
+    <%= link_to "Like", dislike_post_path(post), method: :put %>
+  <% else %>
+    <%= link_to "Like", like_post_path(post), method: :put %>
+  <% end %>
+  <%= post.get_likes.size %>
+  <%= commontator_thread(post) %>
+<% end %>
+

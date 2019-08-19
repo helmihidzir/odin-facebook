@@ -1,3 +1,3 @@
 <% @posts.each do |post| %>
-  <p><%= link_to post.description, post %> by <b><%= post.user.email %> at <%= post.created_at.to_formatted_s(:short) %></b></p>
+  <p><%= link_to post.description, post %> by <i><%= post.user.name %></i> at <i><%= post.created_at.to_formatted_s(:short) %></i></p>
 <% end %>

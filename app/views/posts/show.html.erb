@@ -1,5 +1,5 @@
 <p><%= @post.description %></p>
-by <b><%= @post.user.email %></b> at <b><%= @post.created_at.to_formatted_s(:short) %></b>
+by <i><%= @post.user.name %></i> at <i><%= @post.created_at.to_formatted_s(:short) %></i>
 <br/>
 <% if current_user.liked? @post%>
   <%= link_to "Like", dislike_post_path(@post), method: :put %>

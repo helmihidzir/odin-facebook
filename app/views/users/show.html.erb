@@ -1,4 +1,6 @@
 <h1>Your Profile</h1>
+<p>Name: <%= @user.name %></p>
 <p>Email: <%= @user.email %></p>
 <p>Created at: <%= @user.created_at.to_formatted_s(:long) %></p>
+<%= link_to 'Edit Profile', edit_user_registration_path %>
 <%= link_to "Friends (#{@user.friends.count})", friends_path %>

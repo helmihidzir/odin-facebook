@@ -1,7 +1,11 @@
 <h1>All Results</h1>
 <% @users.each do |user| %>
-  <p>
-    <%= link_to "#{user.name}", user %>
-    <%= link_to "Send request", friend_requests_path(friend_id: user.id), method: :post %>
-  </p>
+  <% if current_user.friends.include?(user) || current_user.pending_friends.include?(user) %>
+
+  <% else %>
+    <p>
+      <%= link_to "#{user.name}", user %>
+      <%= link_to "Send request", friend_requests_path(friend_id: user.id), method: :post %>
+    </p>
+  <% end %>
 <% end %>

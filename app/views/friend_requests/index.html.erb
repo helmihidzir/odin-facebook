@@ -2,7 +2,7 @@
 <% unless @incoming.blank? %>
   <% @incoming.each do |i| %>
     <p>
-      <%= i.user.name %>
+      <%= link_to "#{i.user.name}", i.user %>
       <%= link_to "Accept", friend_request_path(i), method: :put %>
       <%= link_to "Ignore", friend_request_path(i), method: :delete %>
     </p>
@@ -11,6 +11,6 @@
 <h2>Pending Friend Requests</h2>
 <% @outgoing.each do |p| %>
   <p>
-    <%= p.friend.name %>
+    <%= link_to "#{p.friend.name}", p.friend %>
   </p>
 <% end %>

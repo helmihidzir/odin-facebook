@@ -10,7 +10,7 @@ by <b><%= @post.user.email %></b> at <b><%= @post.created_at.to_formatted_s(:sho
 <%= commontator_thread(@post) %>
 <% if user_signed_in? %>
   <p>
-    <%= link_to "Edit", edit_post_path %>
-    <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= link_to "Edit", edit_post_path if policy(@post).edit? %>
+    <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" } if policy(@post).destroy? %>
   </p>
 <% end %>

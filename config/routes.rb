@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
   resources :friends, only: [:index, :destroy]
   resources :friend_requests
-  resources :users do
-    get :posts
-  end
+  # resources :users do
+  #   get :posts
+  # end
 end

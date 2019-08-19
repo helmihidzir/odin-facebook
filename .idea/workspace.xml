@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f58bfb37-d2b0-49f5-87a0-73f96b0b1674" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,11 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="85" lean-forward="true" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
+            <state relative-caret-position="19">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -105,6 +113,7 @@
         <option value="$PROJECT_DIR$/app/views/friend_requests/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -331,11 +340,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134525000" />
+    <option name="totallyTimeSpent" value="135213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="806" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26180258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -362,13 +370,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20190724094619_create_friendships.has_friendship_engine.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20190725072831_create_frienships.rb" />
@@ -625,8 +626,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="85" lean-forward="true" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
+        <state relative-caret-position="19">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
     </entry>

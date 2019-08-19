@@ -1,7 +1,7 @@
 <h1>All Results</h1>
 <% @users.each do |user| %>
   <p>
-    <%= user.name %>
+    <%= link_to "#{user.name}", user %>
     <%= link_to "Send request", friend_requests_path(friend_id: user.id), method: :post %>
   </p>
 <% end %>

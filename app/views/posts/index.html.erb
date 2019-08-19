@@ -1,5 +1,5 @@
 <% @posts.each do |post| %>
-  <p><%= link_to post.description, post %> by <i><%= post.user.name %></i> at <i><%= post.created_at.to_formatted_s(:short) %></i></p>
+  <p><%= link_to post.description, post %> by <i><%= link_to "#{post.user.name}", post.user %></i> at <i><%= post.created_at.to_formatted_s(:short) %></i></p>
   <% if current_user.liked? post%>
     <%= link_to "Like", dislike_post_path(post), method: :put %>
   <% else %>

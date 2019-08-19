@@ -1,3 +1,10 @@
 <% @posts.each do |post| %>
   <p><%= link_to post.description, post %> by <i><%= post.user.name %></i> at <i><%= post.created_at.to_formatted_s(:short) %></i></p>
+  <% if current_user.liked? post%>
+    <%= link_to "Like", dislike_post_path(post), method: :put %>
+  <% else %>
+    <%= link_to "Like", like_post_path(post), method: :put %>
+  <% end %>
+  <%= post.get_likes.size %>
+  <%= commontator_thread(post) %>
 <% end %>
